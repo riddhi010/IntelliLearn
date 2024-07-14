@@ -1,0 +1,146 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    background-image: url('de83f737950272e7943690fc522cbde5.jpg');
+}
+
+header {
+    background-color: #fe7293;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #f5f5f5;
+    font-family: cursive;
+    font-style: italic;
+    
+}
+
+.fashion-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.board-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    
+}
+
+.board-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.board-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.board-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+    text-align: center;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#sidebarToggle {
+    font-size: 50px;
+    cursor: pointer;
+    margin-left: auto;
+}
+.sidebar-toggle {
+    font-size: 24px; /* Adjust size of the sidebar button */
+    position: absolute;
+    top: 20px; /* Adjust vertical position */
+    right: 20px; /* Adjust horizontal position */
+    z-index: 2;
+    background-color: #fe7293;
+    border: none;
+    color: rgb(8, 8, 8); /* Optional: Adjust color */
+    cursor: pointer; /* Ensure it looks clickable */
+    padding: 4px; /* Add some padding for better click area */
+}
+.sidebar-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+

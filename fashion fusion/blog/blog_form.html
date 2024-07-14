@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog - Fashion Fusion</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <button id="sidebarToggle" class="sidebar-toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        <p>Fashion Blogs</p>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/profile">My Profile</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/studio">Fashion Studio</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="blog-form">
+        <h2>Write your Blog....</h2>
+        <form action="/blog/create" method="POST">
+            <input type="text" id="title" name="title" placeholder="Blog Title" required>
+            <textarea id="content" name="content" placeholder="Blog Content" required></textarea>
+            <button type="submit">Create Blog</button>
+        </form>
+    </section>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    
+    sidebarToggle.addEventListener('click', () => {
+        if (sidebar.style.width === '250px') {
+            sidebar.style.width = '0';
+        } else {
+            sidebar.style.width = '250px';
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!sidebar.contains(event.target) && event.target !== sidebarToggle) {
+            sidebar.style.width = '0';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

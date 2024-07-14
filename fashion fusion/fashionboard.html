@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Board - Fashion Fusion</title>
+    <link rel="stylesheet" href="fashionboard.css">
+</head>
+<body>
+    <header>
+        <p>Fashion-board !!</p>
+        <button id="sidebarToggle" class="sidebar-toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        
+    </header>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="closeSidebar">&times;</a>
+        <a href="profile.html">Home</a>
+        <a href="/profile">My Profile</a>
+        <a href="blog.html">Blogs</a>
+        <a href="fashionboard.html">Fashion Studio</a>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <section class="fashion-board">
+        <div class="board-item">
+            <img src="Screenshot 2024-07-13 211439.png" alt="Fashion Board Image 1">
+            <div class="overlay">
+                <h2>Trends and Western wear</h2>
+                <p>Discover the latest trends and styles.</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="Screenshot 2024-07-13 212813.png" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>Saree Style</h2>
+                <p>Explore the world of saree.</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="76b4decd2697eedf250824c5cf05e919.jpg" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>Indian Wedding</h2>
+                <p>Explore and select your wedding outfit!</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="Screenshot 2024-07-13 211934.png" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>Indo-Western</h2>
+                <p>Dive into the culture of Indian+Western</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="Screenshot 2024-06-29 152917.png" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>College Outfits</h2>
+                <p>Dive into the culture of Indian+Western</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="ColorGraded1322.webp" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>Denim wear</h2>
+                <p>Rock your look with versatile and stylish denim wear!!</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="91ijKqRWpwL._SY741_.jpg" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>Kurtas</h2>
+                <p>Embrace timeless tradition with exquisite kurta.</p>
+            </div>
+        </div>
+        <div class="board-item">
+            <img src="janhvi-kapoor-1676545887.jpg" alt="Fashion Board Image 2">
+            <div class="overlay">
+                <h2>Formal Wear</h2>
+                <p>Elevate your elegance with impeccable formal wear.</p>
+            </div>
+        </div>
+        
+        
+        
+
+        <!-- Add more board items as needed -->
+    </section>
+
+    <footer>
+        
+    </footer>
+    <script>
+        document.getElementById('sidebarToggle').onclick = function() {
+            document.getElementById('sidebar').style.width = '250px';
+            document.getElementById('overlay').style.display = 'block';
+        }
+    
+        document.getElementById('closeSidebar').onclick = function() {
+            document.getElementById('sidebar').style.width = '0';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    
+        document.getElementById('overlay').onclick = function() {
+            document.getElementById('sidebar').style.width = '0';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

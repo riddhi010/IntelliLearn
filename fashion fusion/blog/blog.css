@@ -1,0 +1,187 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dcfefd;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fe7293;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f5f5f5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-item {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.blog-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-item .blog-excerpt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.blog-detail {
+    padding: 20px;
+}
+
+.blog-detail h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-detail .blog-content {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.blog-form {
+    padding: 20px;
+}
+
+.blog-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-form input[type="text"],
+.blog-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.blog-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #fe7293;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blog-form button:hover {
+    background-color: #f05274;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#sidebarToggle {
+    font-size: 50px;
+    cursor: pointer;
+    
+}
+.sidebar-toggle {
+    font-size: 24px; /* Adjust size of the sidebar button */
+    position: absolute;
+    top: 20px; /* Adjust vertical position */
+    right: 20px; /* Adjust horizontal position */
+    z-index: 2;
+    background-color: #fe7293;
+    border: none;
+    color: rgb(8, 8, 8); /* Optional: Adjust color */
+    cursor: pointer; /* Ensure it looks clickable */
+    padding: 4px; /* Add some padding for better click area */
+}
+.sidebar-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+/* Your existing CSS styles */
+/* Example for the camera icon */
+.photo-upload {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.photo-upload label {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.photo-upload label:hover {
+    background-color: #e0e0e0;
+}
+
+.photo-upload label i {
+    margin-right: 8px;
+}
+
+/* Adjust as per your design and theme */
