@@ -1,0 +1,72 @@
+import spacy
+
+# Load the English NLP model
+nlp = spacy.load("en_core_web_sm")
+
+# List of subjects the chatbot can suggest courses for
+subjects = {
+    "machine learning": ["ml", "machine learning", "artificial intelligence", "ai", "deep learning"],
+    "data science": ["data science", "big data", "statistics", "data analysis"],
+    "generative ai": ["generative ai", "gan", "deepfake", "generative models"]
+}
+
+# Define a function to match user input with course topics using NLP
+def match_subject(user_input):
+    doc = nlp(user_input.lower())
+    for token in doc:
+        for subject, keywords in subjects.items():
+            if any(keyword in token.text for keyword in keywords):
+                return subject
+    return None
+
+# Chatbot conversation
+def chatbot():
+    print("Chatbot: Hey there!! Welcome to IntelliLearn, what's your interest?")
+    
+    user_input = input("User: ")
+    subject = match_subject(user_input)
+    
+    # Check if the user's interest matches any subject
+    if subject:
+        print(f"Chatbot: Ohh nice!! I will suggest you the best course for your interest in {subject.capitalize()}.")
+        
+        # Ask about time spent on learning
+        print("Chatbot: How much time do you want to spend on your interest?")
+        time_spent = input("User: ")
+        print(f"Chatbot: Great! You've mentioned {time_spent} hours.")
+
+        # Ask about expertise level
+        print("Chatbot: What is your expertise level in that domain? (Beginner, Intermediate, Advanced)")
+        expertise = input("User: ").lower()
+
+        if expertise in ['beginner', 'intermediate', 'advanced']:
+            print(f"Chatbot: Fine!! You mentioned that you're at {expertise} level.")
+        else:
+            print("Chatbot: Got it, I'll assume you're comfortable learning.")
+
+        # Ask why the user wants to learn
+        print("Chatbot: Why do you want to learn it?")
+        motivation = input("User: ")
+        
+        print(f"Chatbot: Great!! You mentioned: {motivation}. Based on your responses, here is the best course for you:")
+
+        # Suggest a course based on the expertise level
+        if expertise == 'beginner':
+            print(f"Chatbot: I suggest 'Introduction to {subject.capitalize()}' for beginners.")
+        elif expertise == 'intermediate':
+            print(f"Chatbot: I suggest 'Intermediate {subject.capitalize()}' to help deepen your knowledge.")
+        elif expertise == 'advanced':
+            print(f"Chatbot: I suggest 'Advanced {subject.capitalize()} Topics' to master the concepts.")
+    else:
+        print("Chatbot: I'm sorry, I currently provide course recommendations for topics like Machine Learning, Data Science, Artificial Intelligence, etc. Please choose one of these subjects.")
+    
+    # End the conversation
+    print("Chatbot: Is there anything else I can assist you with?")
+    user_input = input("User: ").lower()
+    if 'no' in user_input or 'bye' in user_input:
+        print("Chatbot: Have a great day! Byee!!")
+    else:
+        print("Chatbot: I'm happy to help! Feel free to ask me anything.")
+
+# Run the chatbot
+chatbot()

@@ -1,0 +1,264 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #ffffff;
+    color: #17a2b8;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+.logo h1 {
+    font-family: cursive;
+    color: #17a2b8;
+    font-size: 40px;
+}
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #17a2b8;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+header .user-actions a {
+    margin-left: 20px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .user-actions a.cta {
+    background-color: #e74c3c;
+}
+
+header .user-actions a:hover {
+    background-color: #c0392b;
+}
+
+header .search-bar {
+    margin-left: 20px;
+    display: flex;
+}
+
+header .search-bar input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+header .search-bar button {
+    background-color: #e67e22;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Filter options */
+.filter-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.filter-options .filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-options select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+}
+
+/* Featured courses */
+.featured-courses {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.featured-courses h2 {
+    margin-bottom: 40px;
+}
+
+.featured-courses .course-card {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.featured-courses .course-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.featured-courses .course-card h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.featured-courses .course-card p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.featured-courses .course-card .button {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Course listing */
+.course-listing {
+    padding: 40px 20px;
+}
+
+.course-listing h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.course-listing .course-card {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-links {
+    margin-bottom: 20px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #e74c3c;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    margin-bottom: 150px;
+}
+
+header {
+    background-color: #fffdfd;
+    color: #17a2b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 70px;
+    width: auto;
+}
+header .name h2 {
+    margin-left: -250px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #0c0c0c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 50px;
+    font-size: 20px;
+
+    
+}
+a:hover {
+  color: #0f6674;
+  text-decoration: underline;
+}
+
+.about-us {
+    padding: 50px 20px;
+    background-color: #17a2b8;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-family: cursive;
+}
+.about-us h1 {
+    margin-top: 60px;
+}
+.learn {
+    margin-top: 70px;
+    margin-left: 280px;
+}
+.learn span1 {
+    position: absolute;
+    top: 550px; 
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #17a2b8;
+    font-family:sans-serif;
+}
+.learn span2 {
+    position: absolute;
+    top: 600px; 
+    left: 65%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #101010;
+    font-family:cursive;
+    font-weight: bold;
+}
+.learn span3 {
+    position: absolute;
+    top: 700px; 
+    left: 65%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #101010;
+    font-family:'Times New Roman', Times, serif;
+    margin-right: -80px;
+    margin-left: 30px;
+    text-align: justify;
+    
+}
+.new {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.tick-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px; /* Add padding for the tick mark */
+}
+
+.tick-list li {
+    position: relative;
+    padding-left: 30px; /* Space between tick mark and text */
+    margin-bottom: 10px;
+}
+
+.tick-list li::before {
+    content: '\2713'; /* Unicode for check mark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    color: #17a2b8; /* Adjust the color as needed */
+    font-weight: bold;
+}
+.meet h1 {
+    margin-top: 180px;
+    margin-left: 300px;
+    font-size: 50px;
+    font-family: cursive;
+}
+.meet img {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    margin-left: -25px;
+    margin-right: 29px;    
+}
+.image-caption {
+        margin-left: 80px;
+        
+        margin-top: 10px; /* Space between image and text */
+        font-size: 23px; /* Adjust the font size as needed */
+        color: #00394f; /* Text color */
+        font-family: cursive;
+        font-weight: bold;
+}
+.image-name {
+    margin-left: 70px;
+    
+    margin-top: -30px; /* Space between image and text */
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #181818; /* Text color */
+
+}
+.foot {
+   background-color: #00394f;
+   margin-bottom: -200px;
+   padding-bottom: 80px;
+   height: 470px;
+   
+}
+.foot .image img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -1px;
+}
+.foot .text {
+    color: #f4f4f4;
+    margin-left: 100px;
+    margin-top: -120px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.social-icons {
+    margin-top: 20px; /* Space between image and social icons */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px; /* Size of the circular icons */
+    height: 40px;
+    border-radius: 50%; /* Makes the icons circular */
+    background-color: #ffffff; /* Background color of the icon circles */
+    margin: 0 10px; /* Space between icons */
+    overflow: hidden; /* Ensures that the icon fits inside the circle */
+    text-align: center; /* Centers the icon inside the circle */
+    line-height: 40px; /* Vertically centers the icon */
+    color: #000000; /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+.facebook { background-color: #3b5998; } /* Facebook color */
+.twitter { background-color: #1da1f2; } /* Twitter color */
+.instagram { background-color: #e1306c; } /* Instagram color */
+.linkedin { background-color: #0077b5; } /* LinkedIn color */
+.social-icon i {
+    color: #ffffff;
+}
+.write {
+    color: #17a2b8;
+    margin-left: 530px;
+    margin-top: -150px;
+    font-size: 30px;
+    font-family: cursive;
+}
+.map-container {
+    width: 50%;
+    max-width: 800px;
+    margin: auto;
+    margin-left: 450px;
+    margin-top: -230px;
+
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px; /* Adjust height as needed */
+    border: none;
+}
+.loc {
+    margin-top:-250px ;
+    font-weight: bold;
+    font-size: 40px;
+}
+.add {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;   
+}
+.no {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.write img {
+    margin-top: -280px;
+    margin-left: -570px;
+}

@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fffdfd;
+    color: #17a2b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 70px;
+    width: auto;
+}
+
+header .name h2 {
+    margin-left: -330px; /* Consider using a percentage or flex for responsiveness */
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #0c0c0c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+a:hover {
+  color: #0f6674;
+  text-decoration: underline;
+}
+
+/* For smaller devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .name h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        margin-right: 0;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        line-height: 42px;
+    }
+
+    .courses-header #courseSearch {
+        max-width: 100%;
+    }
+}
+
+.courses-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.courses-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.courses-header h1 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.courses-header #courseSearch {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Filter Section */
+.filter-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-section label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.filter-section select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Course List */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+/* Course Card Styling */
+.course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px #17a2b8;
+}
+
+.course-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.course-card button {
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.course-card button:hover {
+    background-color: #45a049;
+}
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensures the image fits and looks good */
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+    margin-bottom: 15px;
+}

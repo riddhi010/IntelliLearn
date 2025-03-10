@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course - IntelliLearn</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Untitled design.png" alt="IntelliLearn Logo">
+        </div>
+        <div class="name" >
+            <h2>IntelliLearn</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="courses-section">
+        <div class="courses-header">
+            
+            <h1>Explore All Courses</h1>
+            <input type="text" id="courseSearch" placeholder="Search for courses..." onkeyup="searchCourses()">
+        </div>
+        
+        <div class="filter-section">
+            <label for="gradeFilter">Filter by Grade:</label>
+            <select id="gradeFilter" onchange="filterCourses()">
+                <option value="all">All</option>
+                <option value="grade-1-5">Grade 1-5</option>
+                <option value="grade-6-8">Grade 6-8</option>
+                <option value="grade-9-12">Grade 9-12</option>
+                <option value="engineering">Engineering</option>
+                
+            </select>
+        </div>
+
+        <div class="course-list" id="courseList">
+            
+        </div>
+    </section>
+
+    <script>
+        // Course data
+        const courses = [
+            { id: 1, name: "Mathematics - Grade 1", grade: "grade-1-5",image:"65f6413b-af55-4b74-bb27-f9d356df5e4b.webp" },
+            { id: 2, name: "Science - Grade 3", grade: "grade-1-5",image:"WhatsApp Image 2024-10-18 at 22.44.36_33591e73.jpg" },
+            { id: 3, name: "English - Grade 6", grade: "grade-6-8",image:"WhatsApp Image 2024-10-18 at 22.46.18_5f969d9b.jpg" },
+            { id: 4, name: "Physics - Grade 9", grade: "grade-9-12",image:"WhatsApp Image 2024-10-18 at 22.42.29_8f38d1d6.jpg" },
+            { id: 5, name: "Computer Science - Grade 10", grade: "grade-9-12",image:"WhatsApp Image 2024-10-18 at 22.48.35_0a725162.jpg" },
+            { id: 6, name: "Mathematics - Grade 11", grade: "grade-9-12",image:"91c7445df7037b1fa5658c3d35ea2da2.jpg" },
+            { id: 7, name: "Data Structures - Engineering", grade: "engineering",image:"WhatsApp Image 2024-10-18 at 22.40.58_19be3164.jpg" },
+            { id: 8, name: "Machine Learning - Engineering", grade: "engineering",image:"WhatsApp Image 2024-10-18 at 22.38.43_8d41ef43.jpg" },
+            { id: 9, name: "Operating Systems - Engineering", grade: "engineering",image:"WhatsApp Image 2024-10-18 at 22.28.35_ca35e9f0.jpg" },
+            { id: 10, name: "DBMS - Engineering", grade: "engineering",image:"WhatsApp Image 2024-10-18 at 22.36.15_fcff1245.jpg" },
+            { id: 11, name: "Distributed systems - Engineering", grade: "engineering",image:"WhatsApp Image 2024-10-18 at 22.33.20_5a2ab241.jpg" },
+            { id: 12, name: "Software engineering - Engineering", grade: "engineering",image:"WhatsApp Image 2024-10-18 at 22.25.52_6aab5642.jpg" },
+            { id: 13, name: "Compiler design - Engineering", grade: "engineering",image:"4f965a1b-ee22-4526-9b65-2b9412a34fef.webp" },
+            { id: 14, name: "Generative AI - Engineering", grade: "engineering",image:"bfce426b-d50d-48ff-a0b5-20a492a60804.webp" },
+        ];
+
+        // Display all courses
+        function displayCourses(filteredCourses) {
+            const courseList = document.getElementById('courseList');
+            courseList.innerHTML = ''; // Clear existing list
+
+            filteredCourses.forEach(course => {
+                courseList.innerHTML += `
+                    <div class="course-card">
+                <img src="${course.image}" alt="${course.name}">
+                <h3>${course.name}</h3>
+                <button onclick="startCourse(${course.id})">Start Course</button>
+            </div>
+                `;
+            });
+        }
+
+        // Initial display
+        displayCourses(courses);
+
+        // Search courses
+        function searchCourses() {
+            const searchValue = document.getElementById('courseSearch').value.toLowerCase();
+            const filteredCourses = courses.filter(course => course.name.toLowerCase().includes(searchValue));
+            displayCourses(filteredCourses);
+        }
+
+        // Filter courses by grade
+        function filterCourses() {
+            const gradeFilter = document.getElementById('gradeFilter').value;
+            let filteredCourses = courses;
+
+            if (gradeFilter !== "all") {
+                filteredCourses = courses.filter(course => course.grade === gradeFilter);
+            }
+
+            displayCourses(filteredCourses);
+        }
+
+        // Start course and track progress
+        function startCourse(courseId) {
+            const selectedCourse = courses.find(course => course.id === courseId);
+            alert(`AI will now track your journey in ${selectedCourse.name}`);
+            // Add logic here to track the course journey
+            window.location.href = `course.html?id=${courseId}`;
+        }
+    </script>
+</body>
+</html>

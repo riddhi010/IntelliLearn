@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fffdfd;
+    color: #17a2b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 70px;
+    width: auto;
+}
+header .name h2 {
+    margin-left: -250px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #0c0c0c;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 50px;
+    font-size: 20px;
+
+    
+}
+a:hover {
+  color: #0f6674;
+  text-decoration: underline;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #17a2b8;
+    height: 100%;
+}
+
+.hero h1 {
+
+    margin: 0 0 20px;
+    font-size: 1.2em;
+    margin-left: 20px;
+    color: #fcfcfc;
+    font-family: cursive;
+    font-size: 50px;
+    text-align: left;
+}
+
+.hero p {
+    margin: 0 0 20px;
+    font-size: 2.2em;
+    margin-left: -980px;
+    color: #fcfcfc;
+    font-family: cursive;
+    font-size: 40px; 
+    margin-top: 50px;
+}
+.hero h3 {
+    text-align: left;
+    color: #fcfcfc;
+    margin-left: 20px;
+}
+.hero img {
+    max-width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    margin-left: 900px;
+    margin-bottom: 10px;
+    margin-top: -2000px;
+}
+/* Add this CSS to style your button */
+.hero button {
+    background-color: #00394f; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Add some padding */
+    text-align: center; /* Center the text (if you want it centered) */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Get it to display as an inline-block (good for linking) */
+    font-size: 16px; /* Increase font size */
+    margin: 20px 0; /* Add some margin */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin-right: 1170px;
+    align-items: left;
+}
+
+.hero button:hover {
+    background-color: #002230; /* Darker green on hover */
+}
+
+.test p {
+    text-align: center;
+    margin-left: 30px;
+}
+.test h1 {
+    text-align: center;
+    margin-left: 50px;
+}
+.container-fluid {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .testimonial-item {
+    text-align: center;
+  }
+  
+  .testimonial-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .bg-light {
+    background-color: #4ee2d8;
+  }
+  
+  .p-4 {
+    padding: 1.5rem;
+  }
+  
+  .px-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .pl-3 {
+    padding-left: 1rem;
+    margin-top: -90px;
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+    
+  }
+  .px-5 .px-2 {
+    margin-left: 460px;
+    font-size: 40px;
+
+  }
+  .mb-14 {
+    margin-left: 510px;
+    font-size: 20px;
+  }
+
+  .faq{
+    text-align: center;
+  }
+  /* General styling for FAQ section */
+.faqs-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    margin-top: -70px;
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-question:hover {
+    color: #007bff;
+}
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff; /* Customize color */
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    font-size: 24px;
+    line-height: 45px; /* Vertically align icon */
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* For smaller devices */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        line-height: 42px;
+    }
+}
