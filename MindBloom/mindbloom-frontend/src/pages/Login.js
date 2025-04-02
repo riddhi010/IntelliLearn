@@ -1,53 +1,47 @@
-import React, {use, useState} from 'react';
-import {loginUser} from '../api/api';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import styles from './LoginRegister.module.css';
 
 const Login = () => {
-    const[email, setEmail] = useState("");
-    const[password, setPassword] = useState("");
-    const[error, setError] = useState("");
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleLogin = async(e) => {
-        e.preventDefault();
-        setError(""); // clear previous errors
+  return (
+    <div className={styles.container}>
+      <div className={styles.leavesContainer}>
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className={`${styles.leaf} leaf-${i % 5}`}></div>
+        ))}
+      </div>
 
-        try{
-            const response = await loginUser({email,password});
-            //(key-authotoken, value-its value)
-            localStorage.setItem("authToken",response.data.token) //store token in localstorage
-            alert("login successfull");
-            navigate("/dashboard");
+      <motion.div
+        className={styles.glassForm}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2>Welcome Back!</h2>
+        <form>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" placeholder="Email" required />
+          </div>
 
-        } catch(err){
-            setError(err.response?.data?.message || "Login failed");
-        }
-    };
-    return (
-        <div className='login-container'>
-            <h2>Login</h2>
-            {error && <p style={{color: "red"}}>{error}</p>}
-            <form onSubmit={handleLogin}>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    );
+          <div>
+            <label htmlFor="password">Password</label>
+            <input id="password" type="password" placeholder="Password" required />
+          </div>
 
+          <button className={styles.authButton} type="submit">Login</button>
+        </form>
+
+        <p>
+          Don't have an account?
+          <span onClick={() => navigate('/register')} className={styles.link}> Register</span>
+        </p>
+      </motion.div>
+    </div>
+  );
 };
 
 export default Login;
-

@@ -1,0 +1,95 @@
+/* Background Animation - Raining Leaves */
+@keyframes fall {
+    0% {
+      transform: translateY(-10vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .leaf {
+    position: fixed;
+    top: -10vh;
+    width: 30px;
+    height: 30px;
+    background: url('leaf.png') no-repeat center;
+    background-size: contain;
+    animation: fall 8s linear infinite;
+  }
+  
+  .leaf:nth-child(1) { left: 10%; animation-duration: 6s; }
+  .leaf:nth-child(2) { left: 20%; animation-duration: 8s; }
+  .leaf:nth-child(3) { left: 30%; animation-duration: 7s; }
+  .leaf:nth-child(4) { left: 50%; animation-duration: 9s; }
+  .leaf:nth-child(5) { left: 70%; animation-duration: 8s; }
+  .leaf:nth-child(6) { left: 80%; animation-duration: 7s; }
+  
+  /* Form Design - Glassmorphic Effect */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E3E4E6, #D6B07D);
+    overflow: hidden;
+  }
+  
+  .glass-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  h2 {
+    color: #473c28;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .glassForm {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(71, 60, 40, 0.3), 0 0 40px rgba(214, 176, 125, 0.4);
+  }
+  
+  
+  
+  input[type="text"], input[type="password"] , input[type="email"]  {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .authButton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #D6B07D;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .authButton:hover {
+    background-color: #473c28;
+  }
+  

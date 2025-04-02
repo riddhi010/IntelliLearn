@@ -1,13 +1,183 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounce 3s infinite;
+}
+/* Hero Section */
+.hero-section {
+  background-color: #E3E4E6; /* Or any color that matches your design */
+  padding-bottom: 0; /* Prevents unnecessary space */
+}
+
+/* What is MindBloom? Section */
+.what-is-section {
+  background-color: #D6B07D; /* Match with Hero Section color or use a gradient */
+  padding-top: 0; /* Prevents unnecessary space */
+}
+
+/* Footer Wavy Section */
+/* Footer Wavy Section */
+footer {
+  background-color: rgb(14, 15, 16);
+  
+  padding-top: 0;
+  position: relative;
+  z-index: 10;
+  height: 150px;
+  overflow: hidden;
+}
+
+footer .footer-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 20;
+}
+
+footer .footer-text {
+  color: #000000;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Social Media Links */
+.social-links {
+  margin-top: 10px; /* Adjust the space between the text and social icons */
+}
+
+.social-icon {
+  margin: 0 10px; /* Spacing between icons */
+  display: inline-block;
+}
+
+.social-icon img {
+  width: 30px; /* Adjust the size of the icons */
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Ensure wavy footer blend with the section's background */
+footer svg path {
+  fill: #D6B07D;
+}
+
+footer svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-content {
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 24px;  /* Adjust size */
+  color: #000000;   /* Creamy color */
+  margin: 0 10px;    /* Spacing between icons */
+  text-decoration: none;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); /* Change the value for a stronger float */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.emoji {
+  animation: float 4s ease-in-out infinite; /* Adjust the duration and timing */
+  font-size: 2rem; /* Adjust the size of the emojis */
+  display: inline-block; /* Ensure they are inline */
+}
+
+.emoji-container {
+  z-index: 10; /* Ensure emojis float above other content */
 }
