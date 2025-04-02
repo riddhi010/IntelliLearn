@@ -9,6 +9,8 @@ const Register = () => {
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
+    //{ ...formData } → Copies the existing form data to keep previous inputs.
+    //[key]:-----
   };
 
   const handleSubmit = async (event) => {
