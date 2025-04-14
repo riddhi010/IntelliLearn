@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+    position: relative;
+    overflow-x: visible;
+}
+
+/* Card 1 – Mood Tracker */
+.mood-tracker-container {
+    width: 900px;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    height: 70vh;
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+/* Card 2 – Mood Graph */
+.mood-graph-wrapper {
+    background: #010101;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-right: 20%;
+    margin-left: 73%;
+    width: 32%;
+    height: 80vh;
+    margin-top: 8%;
+    position: absolute;
+    color: #fbc2eb;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 1;
+}
+
+/* Tracker Title */
+.mood-tracker-title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+/* Mood Buttons */
+.mood-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* All Mood Buttons – Magical & Unified */
+.mood-button {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 300% 300%;
+    border: none;
+    border-radius: 14px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15),
+        0 0 10px rgba(255, 255, 255, 0.2);
+    animation: gradientMove 6s ease infinite;
+}
+
+/* Button Hover Effect */
+.mood-button:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(255, 182, 193, 0.5),
+        0 0 30px rgba(173, 216, 230, 0.4);
+}
+
+/* Shimmer Animation */
+.mood-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shimmer 2.5s infinite;
+}
+
+
+/* Gradient Background Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Emoji */
+.emoji {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 3px rgba(255,255,255,0.5));
+}
+
+.label {
+    font-weight: 600;
+}
+
+/* Mood Log – Sparkle & Shine Edition */
+.mood-log {
+    background: linear-gradient(145deg, #1f1c2c, #928dab);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow:
+        inset 0 4px 8px rgba(255, 255, 255, 0.05),
+        0 0 20px rgba(145, 92, 182, 0.3);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    border: 2px solid #3e3e3e;
+    position: relative;
+}
+
+.mood-log::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mood-log-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.log-list {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.log-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.log-list::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+}
+
+/* Mood Entry – Neon Card */
+.mood-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #eee;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.mood-entry:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(200, 130, 255, 0.4);
+}
+
+.log-emoji {
+    font-size: 1.6rem;
+    filter: drop-shadow(0 0 3px #ffffffaa);
+}
+
+.log-label {
+    color: #ffe8fe;
+    font-weight: 600;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.log-time {
+    font-size: 0.75rem;
+    color: #b5b5b5;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .mood-button {
+        flex: 1 1 calc(50% - 1rem);
+        justify-content: center;
+    }
+
+    .mood-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+}

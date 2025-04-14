@@ -1,0 +1,101 @@
+/* Header Container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Moves elements inside the header */
+    padding: 20px 20px;
+    z-index: 10000;
+  }
+  
+  /* Logo (MindBloom) */
+  .logo {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to right, #9d7644, #ffb347);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Pacifico", cursive;
+    text-shadow: 2px 2px 10px rgba(255, 165, 0, 0.5);
+    margin-left: 50px;
+  }
+  
+  /* Top Right Section - Streak + Profile */
+  .topRightSection {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between streak and profile */
+    margin-right: 50px;
+  }
+  
+  /* Streak Counter */
+  .streakCounter {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb347; /* Burnt orange */
+    background: rgba(255, 165, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 2px solid #ffb347;
+    box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5);
+  }
+  
+  /* Profile Picture */
+  .profileContainer {
+    position: relative;
+  
+  }
+  
+  .profilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.2s ease-in-out;
+
+  }
+  
+  .profilePic:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Dropdown Menu */
+  .dropdownMenu {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: #ee7272;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 120px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  .dropdownMenu p {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .dropdownMenu p:hover {
+    background: rgba(255, 165, 0, 0.3);
+  }
+  
+  .leftSection {
+    display: flex;
+    
+    flex: 0 0 auto; /* Prevent the sidebar from growing */
+    margin-left: -1000px;
+  }

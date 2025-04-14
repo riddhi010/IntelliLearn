@@ -1,0 +1,64 @@
+/* Background Styling */
+.dashboardContainer {
+    background: linear-gradient(to right, #f5e1c8, #e8c3a0); /* Orangish-cream gradient */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    
+  }
+  
+  /* Content Layout */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 80vh;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+ /* Left Section - Greeting and Quote */
+.leftSection {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+    
+  }
+  
+  /* Keyframes for the fadeIn animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+ 
+  .rightSection {
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Inside Dashboard.module.css */
+
+.dashboardImage {
+    width: 1500%; /* Make the image take up full width of its container */
+    height: auto; /* Keep the aspect ratio intact */
+    max-width: 800px; /* Limit the max width to prevent it from becoming too large */
+    /* You can also set height directly, depending on how you want to scale it */
+    margin-top: 60%;
+    margin-right: 50%;
+  }
+  

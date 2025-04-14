@@ -1,0 +1,29 @@
+/* Global styles */
+* {
+    cursor: none; /* Hide the default cursor */
+  }
+  
+  /* Custom Cursor styles */
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6347; /* Set color to something bright */
+    border-radius: 50%;
+    pointer-events: none; /* Prevent the cursor from interfering with interactions */
+    transition: transform 0.15s ease;
+    z-index: 100002; /* Make sure the cursor is always on top */
+  }
+  
+  /* Create a trailing effect */
+  .cursorTrail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 99, 71, 0.4); /* Slightly transparent */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.2s ease;
+  }
+  

@@ -1,0 +1,85 @@
+/* Container for Greeting */
+.greetingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 1;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Typing effect on Greeting */
+.greeting {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4a2f23;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blink cursor for typing effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Emoji styling */
+.emoji {
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+/* Name styling */
+.name {
+  font-size: 3rem;
+  font-weight: normal;
+  color: #d47b2a;
+  animation: fadeInText 2s ease-out forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Friendly message styling */
+.additionalMessage {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  color: #715a48; /* Light color for secondary message */
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeInText 2s ease-out forwards 1s; /* Fade-in effect after greeting */
+}
+
+/* Fade-in animation for the entire greeting container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
