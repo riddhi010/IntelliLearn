@@ -17,9 +17,6 @@ MindBloom is an AI-powered mental health tracker designed to help users monitor 
 - **Database:** MongoDB
 - **AI & ML:** Python, TensorFlow, NLP
 - **Authentication:** JWT, OAuth
-
-## 📌 Project Status
-MindBloom is currently in development. Stay tuned for upcoming features and updates!
 ---
 🌱 **MindBloom - Because Mental Health Matters!**
 
